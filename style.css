@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #ea76af;
+  overflow: hidden;
+}
+
+#vid-one,
+#vid-two {
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#vid-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #c6006f;
+  z-index: 1;
+  overflow: hidden;
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+}
+#grab-bar {
+  position: absolute;
+  margin: 5px;
+  right: calc(50% - 17px);
+  top: calc(50vh + ((80vw / 1.778) / 25));
+  transform: translateY(-50%) scaleY(400%);
+  color: #fff;
+  z-index: 2;
+  font-size: 300%;
+  cursor: pointer;
+  touch-action: none;
+}
+
+#controls-container {
+  transition: opacity 0.25s ease-in-out;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  gap: 80px;
+  height: 40px;
+  overflow: hidden;
+
+  position: absolute;
+  padding: 5px;
+  top: calc(50vh + (((80vw / 1.778) / 2) + 10px));
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 1;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 3;
+}
+
+#control {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: lightgray;
+  font-size: 40px;
+  height: 40px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.i-hover {
+  transition: all 0.1s ease-in-out;
+  transform: scale(1);
+}
+
+.i-hover:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+}
